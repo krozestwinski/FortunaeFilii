@@ -1,0 +1,30 @@
+
+body {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif;
+  line-height: 1.4;
+  color: #333333;
+  background: #fff;
+}
+
+.main-container {
+	margin-top: 75px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.login-toolbar {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+.font-large {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.font-small {
+	font-weight: normal;
+	font-size: 9px;
+}

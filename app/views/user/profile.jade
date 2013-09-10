@@ -1,0 +1,20 @@
+extends ../layouts/default
+
+block main
+	.page-header 
+		h1 #{profile.name}
+	.row
+		.col-lg-2
+			img.img-thumbnail.img-responsive(src=profile.picture || "https://ssl.gstatic.com/s2/profiles/images/silhouette120.png")
+		.col-lg-10
+			.row
+				span.col-lg-2 Name:
+				span.col-lg-10 #{profile.name}
+			.row
+				span.col-lg-2 Email:
+				span.col-lg-10 
+					a(href="mailto:"+profile.email) #{profile.email}
+			.row
+				span.col-lg-2 Birthday:
+				span.col-lg-10 #{profile.birthday || "Not entered"}
+		

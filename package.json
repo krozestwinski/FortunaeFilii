@@ -1,0 +1,33 @@
+{
+  "name": "FortunaeFilii",
+  "description": "Website for players looking other players",
+  "version": "0.0.1",
+  "author": {
+    "name": "Krzysztof Rozestwinski",
+    "email": "k.rozestwinski@gmail.com"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "dependencies": {
+    "express": "latest",
+    "express-namespace": "latest",
+    "mongoose": "latest",
+    "mongoose-user": "latest",
+    "passport": "latest",
+    "passport-local": "latest",
+	"passport-google-oauth": "latest",
+    "connect-mongo": "latest",
+    "connect-flash": "latest",
+    "view-helpers": "latest",
+    "jade": "latest",
+    "async": "latest",
+    "forever": "latest",
+	"less-middleware": "latest"
+  },
+  "keywords": [
+    "mvc",
+    "boilerplate"
+  ]
+}
