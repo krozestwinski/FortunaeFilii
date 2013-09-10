@@ -9,10 +9,10 @@ header
 			a.navbar-brand(href="/")= pkg.name
 		div.collapse.navbar-collapse.navbar-ex1-collapse.navbar-left
 			ul.nav.navbar-nav
-				li.active
-					a(href="#") Link
 				li
-					a(href="#") Link
+					a(href="/group/all") Groups
+				li
+					a(href="/user/all") Players
 				li.dropdown
 					a.dropdown-toggle(href="#", data-toggle="dropdown") Dropdown
 						b.caret
@@ -23,7 +23,7 @@ header
 							a(href="#") Action 2
 		.nav.navbar-nav.navbar-right.btn-toolbar.login-toolbar
 			if (req.isAuthenticated())
-				a.btn.btn-danger.navbar-btn(href="/profile/"+req.user.id)
+				a.btn.btn-danger.navbar-btn(href="/user/profile/"+req.user.id)
 					= req.user.name					
 					img.pull-left(src=req.user.google.picture || "https://ssl.gstatic.com/s2/profiles/images/silhouette120.png", alt="avatar", width="18", height="18")
 				a.btn.btn-info.navbar-btn(href="/logout/") Logout				

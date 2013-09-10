@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block main	
+	.row.page-header
+		.col-lg-10
+			h1 Looking for Group
+		.col-lg-2
+			a.btn.btn-danger.btn-lg(href="/group/new") 
+				span.glyphicon.glyphicon-plus
+				| Create new		
+	each group in groups
+		.row
+			.col-leg-4 #{group.name}
+			.col-lg-4 #{group.nick}
+			.col-lg-1 #{group.length} / #{group.size}				
