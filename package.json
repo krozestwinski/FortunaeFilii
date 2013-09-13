@@ -24,7 +24,10 @@
     "jade": "latest",
     "async": "latest",
     "forever": "latest",
-	"less-middleware": "latest"
+	"less-middleware": "latest",
+	"socket.io": "latest",
+	"passport.socketio": "latest",
+	"connect": "latest"
   },
   "keywords": [
     "mvc",

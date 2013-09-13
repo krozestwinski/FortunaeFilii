@@ -1,0 +1,45 @@
+extends ../layouts/default
+
+block main
+	.row(ng-app="GroupModule" ng-controller="GroupController")
+		.col-lg-8
+			.page-header
+				h1 #{group.name}
+		.col-lg-4
+			.panel.panel-info
+				.panel-heading
+					.row
+						.col-lg-10.col-xs-8
+							.panel-title 
+								h5 Party
+						.col-lg-2.col-xs-4
+							button.btn.btn-success.pull-right Join
+				.panel-body
+					.row
+						.col-lg-6
+							| Nick
+		.col-lg-8
+			.well
+				| Description here
+		.col-lg-8
+			.panel.panel-primary
+				.panel-heading
+					.panel-title Chat
+				.panel-body
+					.row.chat-room(scroll-glue)
+						.col-lg-12(ng-repeat="msg in messages")
+							b {{msg.user}}: 
+							| {{msg.message}}
+				.panel-footer
+					.row
+						form(ng-submit="sendMessage()")											
+							.col-lg-10.col-sm-10
+								input.form-control(type="text", ng-model="message", placeholder="Chat here")
+							.col-lg-2.col-sm-2
+								button.btn.btn-default.btn-block(type="submit") Send
+block foot
+	script(src='/socket.io/socket.io.js')
+	script(src='/js/services/chatService.js')
+	script(src='/js/controllers/groupController.js')
+	script(src='/js/app.js')
+	script(src='https://rawgithub.com/Luegg/angularjs-scroll-glue/master/src/scrollglue.js')

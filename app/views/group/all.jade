@@ -10,6 +10,8 @@ block main
 				| Create new		
 	each group in groups
 		.row
-			.col-leg-4 #{group.name}
-			.col-lg-4 #{group.nick}
-			.col-lg-1 #{group.length} / #{group.size}				
+			.col-lg-4 
+				a(href="/group/details/" + group.id) #{group.name}
+			.col-lg-4.col-xs-6
+				a(href="/user/profile/"+group.owner.id) by #{group.nick}
+			.col-lg-2.col-xs-6 #{group.party.length} / #{group.size}				

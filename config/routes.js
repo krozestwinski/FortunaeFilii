@@ -29,6 +29,7 @@ module.exports = function (app, passport) {
 	app.get('/logout', user.logout);
 
 	app.get('/group/all', group.all);
+	app.get('/group/details/:id', group.details);
 	app.get('/group/new', group.new);
 	app.post('/group/new', group.create);
 }

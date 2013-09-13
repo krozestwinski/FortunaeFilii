@@ -51,12 +51,15 @@ module.exports = function (app, config, passport) {
 
     // cookieParser should be above session
     app.use(express.cookieParser())
+
+	var sessionStore = new mongoStore({
+		url: config.db,
+		collection: 'sessions'
+	});
+	app.set('appSessionStore', sessionStore);
     app.use(express.session({
-      secret: pkg.name,
-      store: new mongoStore({
-        url: config.db,
-        collection : 'sessions'
-      })
+      secret: config.sessionSecret,
+      store: sessionStore
     }))
 
     // Passport session
