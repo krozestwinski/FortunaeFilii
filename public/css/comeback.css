@@ -1,0 +1,70 @@
+/* Sticky footer styles
+-----------------------------------------                                                      
+*/
+
+html,
+body {
+	height: 100%,
+	line-height: 1.4;
+	color: #333333;
+	/* IE10 Consumer Preview */ 
+	background-image: -ms-linear-gradient(bottom, #9B9B9B 0%, #000000 100%);
+	/* Mozilla Firefox */ 
+	background-image: -moz-linear-gradient(bottom, #9B9B9B 0%, #000000 100%);
+	/* Opera */ 
+	background-image: -o-linear-gradient(bottom, #9B9B9B 0%, #000000 100%);
+	/* Webkit (Safari/Chrome 10) */ 
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #9B9B9B), color-stop(1, #000000));
+	/* Webkit (Chrome 11+) */ 
+	background-image: -webkit-linear-gradient(bottom, #9B9B9B 0%, #000000 100%);
+	/* W3C Markup, IE10 Release Preview */ 
+	background-image: linear-gradient(to top, #9B9B9B 0%, #000000 100%);
+}
+
+.comeback {
+	color: #F2F2F2;
+	text-align: center;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by its height */
+	margin: 0px auto -240px;
+	/* Pad bottom by footer height */
+	padding: 60 0 240px;
+}
+
+.comeback > h1 {
+	font-family: 'Change One';
+	font-size: 72px;
+}
+
+.social-media, .social-media  h1 {
+	font-family: 'Changa One';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 50px;
+}
+
+.facebook, .facebook:hover {
+	color: #3B4998;
+	text-decoration: none;
+}
+
+.twitter, .twitter:hover {
+	color: #4099FF;
+	text-decoration: none;
+}
+
+.steam, .steam:hover {
+	color: #7DA10E;
+	text-decoration: none;
+}
+
+
+/* Set the fixed height of the footer here */
+#footer {
+	height: 240px;
+	text-align: center;
+}
+
+

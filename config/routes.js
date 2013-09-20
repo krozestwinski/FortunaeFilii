@@ -20,10 +20,15 @@ var group = require('../app/controllers/group');
 
 module.exports = function (app, passport) {
 
-	app.get('/', home.index);
+	app.get('/', home.comeback);
 	app.get('/auth/google', passport.authenticate('google'));
-	app.get('/auth/google/return',  passport.authenticate('google', { successRedirect: '/',
+	app.get('/auth/google/return',  passport.authenticate('google', { 
+									successRedirect: '/',
                                     failureRedirect: '/login' }));
+	app.get('/auth/steam/', passport.authenticate('steam'));
+	app.get('/auth/steam/return', passport.authenticate('steam', {
+									successRedirect: '/',
+									failureRedirect: '/login' }));
 	app.get('/user/profile/:id', user.profile);
 	app.get('/user/all', user.all);
 	app.get('/logout', user.logout);

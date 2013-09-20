@@ -1,0 +1,23 @@
+<% include ../includes/head.ejs %>
+<% include ../includes/header.ejs %>
+<div class="row page-header">
+	<div class="col-lg-10">
+		<h1> Looking for Group </h1>
+	</div>
+	<div class="col-lg-2">
+		<a class="btn btn-danger btn-lg" href="/group/new">	Create New	</a>
+	</div>	
+</div>	
+<% groups.forEach(function(group) { %>
+	<div class="row">
+		<div class="col-lg-4">
+			<a href="/group/details/<%= group.id %>"> <%= group.name %></a>
+		</div>
+		<div class="col-lg-4 col-xs-6">
+			by <a href="/user/profile/<%= group.owner.id %>"> <%= group.nick %> </a>
+		</div>
+		<div class="col-lg-2 col-xs-6"> <%= group.party.length %> / <%= group.size %>
+		</div>
+	</div>
+<% }); %>
+<% include ../includes/foot.ejs %>

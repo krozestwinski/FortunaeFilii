@@ -1,0 +1,13 @@
+<% include ../includes/head %>
+<% include ../includes/header %>
+<h1 class="page-header"> Players </h1>
+<% profiles.forEach(function (profile) { %>
+		<div class="row">
+			<div class="col-lg-1">
+				<img src="<%= profile.google.picture || 'https://ssl.gstatic.com/s2/profiles/images/silhouette120.png' %>" height="27" width="27" />
+			</div>
+			<div class="col-lg-4">
+				<a href="/user/profile/<%= profile.id %>"> <%= profile.name %> </a>
+			</div>
+		</div>
+<% }); %>

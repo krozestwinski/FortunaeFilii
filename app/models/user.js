@@ -23,7 +23,8 @@ var UserSchema = new Schema({
   twitter: {},
   github: {},
   google: {},
-  linkedin: {}
+  linkedin: {},
+  characters: [ ]
 })
 
 /**

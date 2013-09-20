@@ -10,3 +10,7 @@ exports.index = function (req, res) {
     title: 'Node Express Mongoose Boilerplate'
   })
 }
+
+exports.comeback = function (req, res) {
+	res.render('index');
+}
